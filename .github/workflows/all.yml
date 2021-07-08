@@ -93,17 +93,8 @@ jobs:
     runs-on: ubuntu-18.04
     if: github.ref == 'refs/heads/master'
     needs:
-      - build_bionic_64
-      - build_buster_64
-      - build_fedora_33
-      - build_fedora_34
-      - build_focal_64
-      - build_groovy_64
-      - build_hirsute_64
-      - build_mac
       - build_mingw
       - build_source
-      - build_stretch_64
     steps:
       - uses: actions/checkout@v1.2.0
       - uses: actions/download-artifact@v2
